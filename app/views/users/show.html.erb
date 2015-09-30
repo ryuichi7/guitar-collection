@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h3>User info:</h3>
 <p>
   <strong>First name:</strong>
   <%= @user.first_name %>
@@ -15,5 +16,28 @@
   <%= @user.email %>
 </p>
 
+
+<h3> Guitars for this user: </h3>
+<%= @user.guitars.collect(&:make).join(', ') %>
+
+<p>
+
+<h3> Amps for this user: </h3>
+<%= @user.amps.collect(&:make).join(', ') %>
+
+<p>
+
+<h3> Pedals for this user: </h3>
+<%= @user.pedals.collect(&:make).join(', ') %>
+
+<p>
+
+<img src= "http://cmster.com/media/oRfbxQMQBOo6fpG99CwXLE73VVnRTdbqI1Q8rLsayyFswtOeogh4WN1kTmGcm46h.jpg">
+
+<p>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path %> |
+<%= link_to 'Guitars', guitars_path(@guitar) %> | :)
+<%= link_to 'Amps', amps_path(@amps) %>

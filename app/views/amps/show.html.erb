@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @amp.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @amp.model %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @amp.year %>
+</p>
+
+<%= link_to 'Edit', edit_amp_path(@amp) %> |
+<%= link_to 'Back', amps_path %>
